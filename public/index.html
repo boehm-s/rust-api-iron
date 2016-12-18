@@ -3,9 +3,36 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title> Test Page </title>
-    </style>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="js/test.js"></script>
   </head>
   <body>
-    <script src="js/test.js"></script>
+    <h1> You're lost little girl ... </h1>
+    <input id="ws-message" type="text" placeholder="message to send via WS ..."/>
+    <button id="ws-submit-message"> Send WS message </button>
+    <br/>
+    <br/>
+    <input id="ws-JSON" type="text" placeholder="JSON to send via WS ..."/>
+    <button id="ws-submit-JSON"> Send WS message </button>
+    <div id="res-container">
+    </div>
+
+
+
+
+
+
+    <video id="localVideo" autoplay muted style="width:40%;"></video>
+    <video id="remoteVideo" autoplay style="width:40%;"></video>
+
+    <br />
+
+    <input type="button" id="start" onclick="start(true)" value="Start Video"></input>
+
+    <script type="text/javascript">
+//      pageReady();
+    </script>
+
+
   </body>
 </html>

@@ -1,0 +1,474 @@
+/* body {
+   padding-top: 90px;
+   }
+   .panel-login {
+   border-color: #ccc;
+   -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+   -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+   box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+   }
+   .panel-login>.panel-heading {
+   color: #00415d;
+   background-color: #fff;
+   border-color: #fff;
+   text-align:center;
+   }
+   .panel-login>.panel-heading a{
+   text-decoration: none;
+   color: #666;
+   font-weight: bold;
+   font-size: 15px;
+   -webkit-transition: all 0.1s linear;
+   -moz-transition: all 0.1s linear;
+   transition: all 0.1s linear;
+   }
+   .panel-login>.panel-heading a.active{
+   color: #029f5b;
+   font-size: 18px;
+   }
+   .panel-login>.panel-heading hr{
+   margin-top: 10px;
+   margin-bottom: 0px;
+   clear: both;
+   border: 0;
+   height: 1px;
+   background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+   background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+   background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+   background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+   }
+   .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+   height: 45px;
+   border: 1px solid #ddd;
+   font-size: 16px;
+   -webkit-transition: all 0.1s linear;
+   -moz-transition: all 0.1s linear;
+   transition: all 0.1s linear;
+   }
+   .panel-login input:hover,
+   .panel-login input:focus {
+   outline:none;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+   border-color: #ccc;
+   }
+   .btn-login {
+   margin-left: 50%;
+   background-color: #59B2E0;
+   outline: none;
+   color: #fff;
+   font-size: 14px;
+   height: auto;
+   font-weight: normal;
+   padding: 14px 0;
+   text-transform: uppercase;
+   border-color: #59B2E6;
+   }
+   .btn-login:hover,
+   .btn-login:focus {
+   color: #fff;
+   background-color: #53A3CD;
+   border-color: #53A3CD;
+   }
+   .forgot-password {
+   text-decoration: underline;
+   color: #888;
+   }
+   .forgot-password:hover,
+   .forgot-password:focus {
+   text-decoration: underline;
+   color: #666;
+   }
+
+   .btn-register {
+   background-color: #1CB94E;
+   outline: none;
+   color: #fff;
+   font-size: 14px;
+   height: auto;
+   font-weight: normal;
+   padding: 14px 0;
+   text-transform: uppercase;
+   border-color: #1CB94A;
+   }
+   .btn-register:hover,
+   .btn-register:focus {
+   color: #fff;
+   background-color: #1CA347;
+   border-color: #1CA347;
+   }
+
+   #login-form, #register-form {
+   padding: 20px;
+   }
+
+   #register-submit {
+   margin-left: 50%;
+   }
+
+   #popup-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+} */
+
+
+
+
+
+@font-face {
+  font-family: 'coalitionregular';
+  src: url("../font/coalition_v2.-webfont.eot");
+  src: url("../font/coalition_v2.-webfont.eot?#iefix") format("embedded-opentype"), url("../font/coalition_v2.-webfont.woff2") format("woff2"), url("../font/coalition_v2.-webfont.woff") format("woff"), url("../font/coalition_v2.-webfont.ttf") format("truetype"), url("../font/coalition_v2.-webfont.svg#arialregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ethnocentricregular';
+  src: url("../font/ethnocentric_rg-webfont.eot");
+  src: url("../font/ethnocentric_rg-webfont.eot?#iefix") format("embedded-opentype"), url("../font/ethnocentric_rg-webfont.woff2") format("woff2"), url("../font/ethnocentric_rg-webfont.woff") format("woff"), url("../font/ethnocentric_rg-webfont.ttf") format("truetype"), url("../font/ethnocentric_rg-webfont.svg#arialregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-family: arial_regular, sans-serif;
+  font-size: 14px;
+  color: #A9A9A9;
+  font-family: "coalitionregular";
+}
+
+body {
+  width: 1100px;
+  height: 750px;
+  margin: auto;
+  padding: auto;
+  float: none;
+  background: url("../img/fond3.jpg") no-repeat fixed;
+  background-size: cover;
+  min-width: 1100px;
+}
+
+.clear {
+  clear: both;
+}
+
+header {
+  width: auto;
+  height: 10%;
+  margin: 0;
+  padding: 0;
+  float: none;
+}
+header img {
+  max-width: 100%;
+  max-height: 100%;
+}
+header #logout {
+  font-family: "coalitionregular";
+  width: 15%;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  background: rgba(92, 172, 238, 0.3);
+}
+header #logout:hover {
+  background: rgba(92, 172, 238, 0.4);
+}
+header #logout:active {
+  font-size: 13px;
+  background: rgba(92, 172, 238, 0.6);
+}
+
+nav {
+  width: 25%;
+  height: 70%;
+  margin: 0;
+  padding: 0;
+  float: left;
+  margin-top: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+nav button {
+  font-family: "coalitionregular";
+  width: 70%;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  background: rgba(92, 172, 238, 0.3);
+}
+nav button:hover {
+  background: rgba(92, 172, 238, 0.4);
+}
+nav button:active {
+  font-size: 13px;
+  background: rgba(92, 172, 238, 0.6);
+}
+
+.float {
+  float: left;
+}
+
+section {
+  width: 50%;
+  height: 90%;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+section #show_ressource {
+  width: auto;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  float: none;
+  list-style-type: none;
+}
+section #show_ressource li {
+  list-style: none;
+  width: 110px;
+  height: 80px;
+  margin: 10px 35px;
+  padding: 0;
+  float: left;
+  text-align: center;
+}
+section #info {
+  width: auto;
+  margin: 20px 0 0 0;
+  padding: 0;
+  float: none;
+  border: 5px solid black;
+}
+section #info #ressource #show_info {
+  width: 100%;
+  height: 65%;
+  margin: auto;
+  padding: 0;
+  float: none;
+}
+section #info #ressource #box_img {
+  height: 35%;
+}
+section #info #ressource #box_img .box_img_mine {
+  width: calc(100% / 3);
+  height: 100%;
+  margin: auto;
+  padding: auto;
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+section #info #ressource #box_img .box_img_mine img {
+  position: absolute;
+  height: 60%;
+  top: 20%;
+  left: 10%;
+}
+section #info #usine #show_info_usine {
+  width: 100%;
+  height: 65%;
+  margin: auto;
+  padding: 0;
+  float: none;
+}
+section #info #usine #box_img_usine {
+  height: 35%;
+}
+section #info #usine #box_img_usine .box_img_mine {
+  width: calc(100% / 3);
+  height: 100%;
+  margin: auto;
+  padding: auto;
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+section #info #usine #box_img_usine .box_img_mine img {
+  position: absolute;
+  height: 60%;
+  top: 20%;
+  left: 10%;
+}
+
+#info_metal, #info_cristal, #info_usine, #info_minion {
+  width: 100%;
+  height: 100%;
+  background: #111;
+  list-style-type: none;
+}
+#info_metal .ico, #info_cristal .ico, #info_usine .ico, #info_minion .ico {
+  float: left;
+  width: 30%;
+}
+#info_metal li, #info_cristal li, #info_usine li, #info_minion li {
+  text-align: center;
+  list-style: none;
+  width: 110px;
+  height: 80px;
+  margin: 10px 35px;
+  padding: 0;
+  float: left;
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+aside {
+  width: 25%;
+  height: 90%;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+aside #show_planet {
+  width: 50%;
+  height: 450px;
+  margin: 40% auto 0;
+  padding: 0;
+  float: none;
+  text-align: center;
+}
+
+#connexion {
+  text-align: center;
+  color: white;
+  width: 40%;
+  height: auto;
+  margin: 20% auto;
+  padding: 0;
+  float: none;
+}
+#connexion input[name="login"], #connexion input[type="password"] {
+  font-family: "coalitionregular";
+  width: 55%;
+  height: 35px;
+  margin: 5px 0px;
+  padding: 5px 4%;
+  float: none;
+  background: rgba(126, 192, 238, 0.3);
+}
+#connexion input[name="login"]:hover, #connexion input[type="password"]:hover {
+  background: rgba(126, 192, 238, 0.5);
+}
+#connexion input[name="login"]:active, #connexion input[type="password"]:active, #connexion input[name="login"]:focus, #connexion input[type="password"]:focus {
+  background: rgba(126, 192, 238, 0.6);
+}
+#connexion input[type="reset"], #connexion input[type="submit"] {
+  font-family: "coalitionregular";
+  width: 30%;
+  height: 35px;
+  margin: 20px 0 0 2%;
+  padding: 0;
+  float: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  background: rgba(92, 172, 238, 0.3);
+}
+#connexion input[type="reset"]:hover, #connexion input[type="submit"]:hover {
+  background: rgba(92, 172, 238, 0.4);
+}
+#connexion input[type="reset"]:active, #connexion input[type="submit"]:active {
+  font-size: 13px;
+  background: rgba(92, 172, 238, 0.6);
+}
+
+#dev_metal, #dev_cristal, #dev_usine, #crea_minion, #attack {
+  font-family: "coalitionregular";
+  width: 30%;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  background: rgba(92, 172, 238, 0.3);
+}
+
+#dev_metal:hover, #dev_cristal:hover, #dev_usine:hover, #crea_minion:hover, #attack:hover {
+  background: rgba(92, 172, 238, 0.4);
+}
+
+#dev_metal:active, #dev_cristal:active, #dev_usine:active, #crea_minion:active, #attack:active {
+  font-size: 13px;
+  background: rgba(92, 172, 238, 0.6);
+}
+
+input[name="nb_minion"], input[name="nb_bataille"] {
+  font-family: "arial";
+  width: 10%;
+  height: 35px;
+  margin: 5px 0px;
+  padding: 5px 4%;
+  float: none;
+  background: rgba(126, 192, 238, 0.3);
+}
+
+input[name="nb_minion"]:hover, input[name="nb_bataille"]:hover {
+  background: rgba(126, 192, 238, 0.5);
+}
+
+input[name="nb_minion"]:active, input[name="nb_minion"]:focus, input[name="nb_bataille"]:active, input[name="nb_bataille"]:focus {
+  background: rgba(126, 192, 238, 0.6);
+}
+
+#accueil div {
+  width: 50%;
+  height: 50%;
+  float: left;
+}
+
+
+
+
+#usine {
+  background: #FFF;
+}
+
+#usine img {
+  width: 100px;
+  height: 100px;
+}
+
+.factory_add {
+  height: 50px;
+  width: 100px;
+  margin-left: 40px;
+}
+
+.factory_img {
+  margin-top: 40px;
+}
+
+.factory_ {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  background: purple;
+  color: white;
+}

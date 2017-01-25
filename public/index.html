@@ -1,38 +1,231 @@
-<!DOCTYPE html>
 <html>
+  <!-- <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+       <link rel="stylesheet" href="css/style.css">
+       <title> Test Page </title>
+       </head>
+       <body class="container-fluid">
+
+       <div class="row" id="popup-container">
+       <div class="col-md-6 col-md-offset-3">
+       <div class="panel panel-login">
+       <div class="panel-heading">
+       <div class="row">
+       <div class="col-xs-6">
+       <a href="#" class="active" id="login-form-link">Login</a>
+       </div>
+       <div class="col-xs-6">
+       <a href="#" id="register-form-link">Register</a>
+       </div>
+       </div>
+       <hr>
+       </div>
+       <div class="panel-body">
+       <div class="row">
+       <div class="col-lg-12">
+       <form id="login-form" method="post" role="form" style="display: block;">
+       <div class="form-group">
+       <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+       </div>
+       <div class="form-group">
+       <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+       </div>
+       <div class="form-group">
+       <div class="row">
+       <div class="col-sm-6 col-sm-offset-3">
+       <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+       </div>
+       </div>
+       </div>
+       </form>
+       <form id="register-form" method="post" role="form" style="display: none;">
+       <div class="form-group">
+       <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+       </div>
+       <div class="form-group">
+       <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+       </div>
+       <div class="form-group">
+       <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+       </div>
+       <div class="form-group">
+       <div class="row">
+       <div class="col-sm-6 col-sm-offset-3">
+       <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+       </div>
+       </div>
+       </div>
+       </form>
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>
+
+
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       <script src="/js/script.js"></script>
+       </body>
+     -->
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title> Test Page </title>
-    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <script src="js/test.js"></script>
+    <title>SpaceShip -- Connexion</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" >
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/connexion.js" type="text/javascript"></script>
+    <script src="js/metal.js" type="text/javascript"></script>
+    <script src="js/cristal.js" type="text/javascript"></script>
+    <script src="js/usine.js" type="text/javascript"></script>
+    <script src="js/minion.js" type="text/javascript"></script>
+    <script src="js/recup_file.js" type="text/javascript"></script>
   </head>
   <body>
-    <h1> You're lost little girl ... </h1>
-    <input id="ws-message" type="text" placeholder="message to send via WS ..."/>
-    <button id="ws-submit-message"> Send WS message </button>
-    <br/>
-    <br/>
-    <input id="ws-JSON" type="text" placeholder="JSON to send via WS ..."/>
-    <button id="ws-submit-JSON"> Send WS message </button>
-    <div id="res-container">
+    <header>
+      <img src="img/logo1.png" alt="Logo">
+      <button id="logout"> Logout</button>
+      <button id="showInscript">S'inscrire</button>
+      <button id="showConnect">Se connecter</button>
+    </header>
+    <nav>
+      <button id="nav_accueil">Vue generale</button>
+      <button id="nav_ressource">Ressource</button>
+      <button id="nav_usine">Usine</button>
+      <button id="nav_bataille">Bataille</button>
+    </nav>
+    <section>
+      <div id="show_ressource">
+	<ul>
+	  <li>
+	    <img src="img/ressource/ico-metal.png" alt="Metal"><br>
+	    <span></span>
+	  </li>
+	  <li>
+	    <img src="img/ressource/ico-cris.png" alt="Cristal"><br>
+	    <span></span>
+	  </li>
+	</ul>
+      </div>
+      <div id="info">
+	<div id="accueil" style="display: block;" class="active">
+	  <div>
+	    <img src="img/ressource/mine-metal.png" alt="Mine de metal"><br>
+	    Level : <span></span><br>
+	    Production : <span></span> / Min<br>
+	  </div>
+	  <div>
+	    <img src="img/ressource/mine-cristal.png" alt="Mine de cristal"><br>
+	    Level : <span></span><br>
+	    Production : <span></span> / Min<br>
+	  </div>
+	  <div>
+	    <img style="width:150px;height:150px;" src="img/factory.png" alt="factory"><br>
+	    Level : <span></span><br>
+	    En prduction : <span></span><br>
+	  </div>
+	  <div>
+	    <img style="width:120px;height:120px;" src="img/purple10.png" alt="minion"><br>
+	    <span id="nbDroid"></span><br>
+	    <button
+	    	style="background-color: black;border-radius: 25px;font-size: 12px;"
+	    	id="crea_minions">
+	    	Créer droids
+	    </button>
+	  </div>
+	</div>
+	<div id="ressource">
+	  <div id="show_info">
+	    <div id="info_metal">
+	      <img src="img/ressource/mine-metal.png" class="ico" alt="Mine de metal">
+	      <ul>
+		<li>
+		  <img src="img/ressource/ico-metal.png" alt="Metal"><br>
+		  <span class="metal"></span>
+		</li>
+		<li>
+		  <img src="img/ressource/ico-cris.png" alt="Cristal"><br>
+		  <span class="crystal"></span><br>
+		</li>
+	      </ul>
+	      <div class="clear"></div>
+	      <div>
+		Production : <span class="prod"></span> / min
+	      </div>
+	      <div>
+		Level : <span class="level"></span>
+	      </div>
+	      <div class="right dev"></div>
+	      <button id="dev_metal">Developper</button>
+	    </div>
+	    <div id="info_cristal">
+	      <img src="img/ressource/mine-cristal.png" class="ico" alt="Mine de metal">
+	      <ul>
+		<li>
+		  <img src="img/ressource/ico-metal.png" alt="Metal"><br>
+		  <span class="metal"></span>
+		</li>
+		<li>
+		  <img src="img/ressource/ico-cris.png" alt="Cristal"><br>
+		  <span class="crystal"></span>
+		</li>
+	      </ul>
+	      <div class="clear"></div>
+	      <div>
+		Production : <span class="prod"></span> / min
+	      </div>
+	      <div>
+		Level : <span class="level"></span>
+	      </div>
+	      <div class="right dev"></div>
+	      <button id="dev_cristal">Developper</button>
+	    </div>
+	  </div>
+	  <div id="box_img">
+	    <div class="box_img_mine">
+	      <img src="img/ressource/mine-metal.png" alt="Mine de metal">
+	    </div>
+	    <div class="box_img_mine">
+	      <img src="img/ressource/mine-cristal.png" alt="Mine de cristal">
+	    </div>
+	  </div>
+	</div>
+	<div id="usine">
+
+	</div>
+	<div id="factory_number"> </div>
+	<div id="factories_display"> </div>
+	</div>
+	<div id="bataille">
+	  <div>
+	    Troupe disponible
+	    <div id="show_droid"></div>
+	    <br>
+	    Troupe a envoyer
+	    <div id="level_bataille"></div>
+	    <br>
+	    Nombre Minion :
+	    <input type="text" name="nb_bataille" id="nb_bataille">
+	    <br>
+	    Id attack :
+	    <input type="text" name="nb_minion" id="droid_id">
+	  </div>
+	  <button id="attack">Attack</button>
+	</div>
+      </div>
+    </section>
+    <aside>
+      <div id="show_planet">
+	<img src="" alt="">
+      </div>
+    </aside>
+    <div id="connexion">
+      <input type="email" name="email" id="login" placeholder="Email"><br>
+      <input type="text" name="username" id="username" placeholder="Username"><br>
+      <input type="password" name="password" id="password" placeholder="Password"><br>
+      <input type="submit" id="submit" value="Inscription">
+<!--       <input type="reset" id="reset" value="Effacer"> -->
     </div>
-
-
-
-
-
-
-    <video id="localVideo" autoplay muted style="width:40%;"></video>
-    <video id="remoteVideo" autoplay style="width:40%;"></video>
-
-    <br />
-
-    <input type="button" id="start" onclick="start(true)" value="Start Video"></input>
-
-    <script type="text/javascript">
-//      pageReady();
-    </script>
-
-
   </body>
 </html>

@@ -8,19 +8,26 @@ staticfile = "*"
 mount = "*"
 router = "*"
 env_logger = "*"
-clap="*"
-openssl="0.7.14"
-openssl-sys="0.7.17"
-
-hyper="*"
+ws = "*"
+hyper= "*"
+bodyparser = "*"
+postgres = "*"
+serde_json = "*"
+pwhash = "*"
+r2d2_postgres = "*"
 
 [features]
 default = []
 ssl = ["hyper/ssl"]
 
-[dependencies.ws]
-version="*"
-features=["ssl"]
+
+# [dependencies.ws]
+# version="*"
+# features=["ssl"]
+
+[dependencies.iron-postgres-middleware]
+git = "https://github.com/martinsp/iron-postgres-middleware.git"
+
 
 [dependencies.iron]
 version="*"

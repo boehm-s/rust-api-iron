@@ -14,21 +14,6 @@ bodyparser = "*"
 postgres = "*"
 serde_json = "*"
 pwhash = "*"
-r2d2_postgres = "*"
-
-[features]
-default = []
-ssl = ["hyper/ssl"]
-
-
-# [dependencies.ws]
-# version="*"
-# features=["ssl"]
-
-[dependencies.iron-postgres-middleware]
-git = "https://github.com/martinsp/iron-postgres-middleware.git"
-
 
 [dependencies.iron]
 version="*"
-features=["ssl"]
